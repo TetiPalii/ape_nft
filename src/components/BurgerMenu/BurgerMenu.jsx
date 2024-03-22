@@ -8,7 +8,7 @@ export const BurgerMenu = ({ menuOpen, setMenuOpen }) => {
       <div
         className={
           menuOpen
-            ? 'md:hidden top-0 left-0 fixed  bg-[#181818] w-screen h-screen ease-in duration-500 overflow-auto'
+            ? 'top-0 left-0 fixed  bg-[#181818] w-screen h-screen ease-in duration-500 overflow-auto'
             : 'fixed left-[-200%] top-0 ease-in duration-500 md:hidden'
         }
       >

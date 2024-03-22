@@ -19,7 +19,7 @@ export const Header = () => {
               setMenuOpen(true);
             }}
             className={
-              'px-2 py-[17px] rounded-xl bg-[#1E1E1E1A] text-sm leading-[1.16] font-semibold'
+              'px-2 py-[17px] bg-[#1E1E1E1A]  text-primaryTextColor text-sm leading-[1.16] font-semibold'
             }
           >
             MENU
@@ -38,7 +38,7 @@ export const Header = () => {
           </ul>
         </div>
       </nav>
-      {menuOpen && <BurgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
+      <BurgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
     </header>
   );
 };
