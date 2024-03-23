@@ -5,43 +5,68 @@ import ReactSlider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { BluetoothIcon } from 'lucide-react';
 
 export const Slider = ({
   centralMode = true,
   className = 'centralMode',
-  infinite = true,
+  infinite = false,
   children,
 }) => {
-  const SampleNextArrow = props => {
-    const { className, style, onClick } = props;
+  //   const SampleNextArrow = props => {
+  //       const { className, style, onClick } = props;
+
+  //     return (
+  //       <div
+  //         className={className}
+  //         style={{
+  //           ...style,
+  //           display: 'block',
+  //           position: 'absolute',
+  //           width: '24px',
+  //           height: '24px',
+  //         }}
+  //         onClick={onClick}
+  //       >
+  //         Next
+  //       </div>
+  //     );
+  //   };
+
+  //   const SamplePrevArrow = props => {
+  //     const { className, style, onClick } = props;
+  //     return (
+  //       <div
+  //         className={className}
+  //         style={{
+  //           ...style,
+  //           display: 'block',
+  //           width: '24px',
+  //           height: '24px',
+  //         }}
+  //         onClick={onClick}
+  //       />
+  //     );
+  //   };
+
+  const NextArrow = ({ className, style, onClick }) => {
     return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: 'block',
-          position: 'absolute',
-          width: '24px',
-          height: '24px',
-        }}
+      <button
         onClick={onClick}
-      />
+        className="border-0 bg-transparent font-BiroScript text-2xl absolute left-[170px] bottom-[-45px]"
+      >
+        Next
+      </button>
     );
   };
-
-  const SamplePrevArrow = props => {
-    const { className, style, onClick } = props;
+  const PrevArrow = ({ onClick }) => {
     return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: 'block',
-          width: '24px',
-          height: '24px',
-        }}
+      <button
         onClick={onClick}
-      />
+        className="border-0 bg-transparent font-BiroScript text-2xl absolute bottom-[-45px] left-[40px]"
+      >
+        Prev
+      </button>
     );
   };
 
@@ -53,15 +78,15 @@ export const Slider = ({
     centerPadding: '0px',
     slidesToScroll: 1,
     initialSlide: 0,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 3860,
         settings: {
           centerMode: centralMode,
           infinite: infinite,
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
