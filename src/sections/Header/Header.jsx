@@ -10,7 +10,7 @@ import { useState } from 'react';
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className=" w-full  px-4  z-50">
+    <header className=" w-full  px-4 fixed z-50">
       <nav className="flex items-start justify-between">
         <Logo />
         <div className="flex flex-col items-center gap-2">
@@ -19,7 +19,7 @@ export const Header = () => {
               setMenuOpen(true);
             }}
             className={
-              'px-2 py-[17px] bg-[#1E1E1E1A]  text-primaryTextColor text-sm leading-[1.16] font-semibold'
+              'px-2 py-[17px] bg-[#1E1E1E1A]  text-secondaryTextColor text-sm leading-[1.16] font-semibold'
             }
           >
             MENU

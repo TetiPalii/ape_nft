@@ -20,7 +20,7 @@ module.exports = {
       colors: {
         backgroundMainColor: '#181818',
         accentColor: '#dc3b5a',
-        primaryTextColor: '#1E1E1E',
+        secondaryTextColor: '#1E1E1E',
       },
     },
   },
