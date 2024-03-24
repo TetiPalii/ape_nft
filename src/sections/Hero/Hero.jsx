@@ -1,7 +1,7 @@
 import { Button } from '@/components/Button/Button';
 import { Slogan } from '@/components/Slogan/Slogan';
 import Image from 'next/image';
-//min-w-[344px]
+
 export const Hero = () => {
   return (
     <section className="px-2 text-secondaryTextColor w-full min-h-[542px]">

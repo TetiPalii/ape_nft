@@ -5,7 +5,6 @@ import ReactSlider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { BluetoothIcon } from 'lucide-react';
 
 export const Slider = ({
   centralMode = true,
@@ -13,47 +12,11 @@ export const Slider = ({
   infinite = false,
   children,
 }) => {
-  //   const SampleNextArrow = props => {
-  //       const { className, style, onClick } = props;
-
-  //     return (
-  //       <div
-  //         className={className}
-  //         style={{
-  //           ...style,
-  //           display: 'block',
-  //           position: 'absolute',
-  //           width: '24px',
-  //           height: '24px',
-  //         }}
-  //         onClick={onClick}
-  //       >
-  //         Next
-  //       </div>
-  //     );
-  //   };
-
-  //   const SamplePrevArrow = props => {
-  //     const { className, style, onClick } = props;
-  //     return (
-  //       <div
-  //         className={className}
-  //         style={{
-  //           ...style,
-  //           display: 'block',
-  //           width: '24px',
-  //           height: '24px',
-  //         }}
-  //         onClick={onClick}
-  //       />
-  //     );
-  //   };
-
-  const NextArrow = ({ className, style, onClick }) => {
+  const NextArrow = ({ onClick }) => {
     return (
       <button
         onClick={onClick}
-        className="border-0 bg-transparent font-BiroScript text-2xl absolute left-[170px] bottom-[-45px]"
+        className="border-0 bg-transparent font-['Biro_Script_Plus_Bold_US'] text-2xl absolute left-[145px] bottom-[-52px]"
       >
         Next
       </button>
@@ -63,7 +26,7 @@ export const Slider = ({
     return (
       <button
         onClick={onClick}
-        className="border-0 bg-transparent font-BiroScript text-2xl absolute bottom-[-45px] left-[40px]"
+        className="border-0 bg-transparent font-['Biro_Script_Plus_Bold_US'] text-2xl absolute bottom-[-52px] left-[60px]"
       >
         Prev
       </button>
