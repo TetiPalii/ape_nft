@@ -16,7 +16,7 @@ export const Slider = ({
     return (
       <button
         onClick={onClick}
-        className="border-0 bg-transparent font-['Biro_Script_Plus_Bold_US'] text-2xl absolute left-[145px] bottom-[-52px]"
+        className="border-0 bg-transparent font-['Biro_Script_Plus_Bold_US'] text-2xl absolute left-[145px] bottom-[-52px] hover:text-accentColor focus:text-accentColor"
       >
         Next
       </button>
@@ -26,7 +26,7 @@ export const Slider = ({
     return (
       <button
         onClick={onClick}
-        className="border-0 bg-transparent font-['Biro_Script_Plus_Bold_US'] text-2xl absolute bottom-[-52px] left-[60px]"
+        className="border-0 bg-transparent font-['Biro_Script_Plus_Bold_US'] text-2xl absolute bottom-[-52px] left-[60px] hover:text-accentColor focus:text-accentColor"
       >
         Prev
       </button>
