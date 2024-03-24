@@ -10,16 +10,23 @@ export const FaqList = ({ faqData }) => {
   const id = () => nanoid();
 
   const handleDropdownClick = id => {
-    setOpenDropdownId(prevId => (prevId === id ? null : id));
+    setOpenDropdownId(prevId => {
+      console.log('prev', prevId);
+      console.log(id);
+      return prevId === id ? false : id;
+    });
   };
 
   return (
-    <ul className="flex flex-col gap-y-[18px] items-center ">
+    <ul>
       {faqData.map((item, idx) => {
         return (
           <FaqItem
             isOpen={openDropdownId === idx}
-            onClick={() => handleDropdownClick(idx)}
+            onClick={() => {
+              console.log('item', idx);
+              handleDropdownClick(idx);
+            }}
             key={id()}
             item={item}
             itemNumber={idx}

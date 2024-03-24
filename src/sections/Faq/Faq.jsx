@@ -1,5 +1,5 @@
 import { FaqList } from '@/components/FaqList/FaqList';
-import { FaqTitle } from '@/components/FaqTitle/FaqTitle';
+import { FaqTitle } from '@/components/SubTitle/SubTitle';
 import { SectionTitle } from '@/components/SectionTitle/SectionTitle';
 import faqData from '@/data/faqData.json';
 

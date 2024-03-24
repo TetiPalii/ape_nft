@@ -16,7 +16,7 @@ export const Slider = ({
     return (
       <button
         onClick={onClick}
-        className="border-0 bg-transparent font-['Biro_Script_Plus_Bold_US'] text-2xl absolute left-[145px] bottom-[-52px] hover:text-accentColor focus:text-accentColor"
+        className="border-0 bg-transparent font-['Biro_Script_Plus_Bold_US'] text-2xl absolute left-[145px] bottom-[-52px] hover:text-accentColor focus:text-accentColor md:hidden"
       >
         Next
       </button>
@@ -26,7 +26,7 @@ export const Slider = ({
     return (
       <button
         onClick={onClick}
-        className="border-0 bg-transparent font-['Biro_Script_Plus_Bold_US'] text-2xl absolute bottom-[-52px] left-[60px] hover:text-accentColor focus:text-accentColor"
+        className="border-0 bg-transparent font-['Biro_Script_Plus_Bold_US'] text-2xl absolute bottom-[-52px] left-[60px] hover:text-accentColor focus:text-accentColor md:hidden"
       >
         Prev
       </button>
@@ -43,33 +43,10 @@ export const Slider = ({
     initialSlide: 0,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 3860,
-        settings: {
-          centerMode: centralMode,
-          infinite: infinite,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1279,
-        settings: {
-          infinite: infinite,
-          centerMode: false,
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          centerMode: false,
-          infinite: infinite,
-          slidesToShow: 1,
-        },
-      },
-    ],
   };
-  return <ReactSlider {...settings}>{children}</ReactSlider>;
+  return (
+    <ReactSlider {...settings} className="md:hidden">
+      {children}
+    </ReactSlider>
+  );
 };
