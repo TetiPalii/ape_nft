@@ -9,7 +9,6 @@ export const Form = ({ children }) => {
           'bg-accentColor px-[91px] py-3 hover:text-secondaryTextColor focus:text-secondaryTextColor'
         }
       >
-        {' '}
         MINT
       </Button>
     </form>
