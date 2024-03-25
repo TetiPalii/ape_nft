@@ -3,9 +3,7 @@ import mindMap from '@/data/mindMap.json';
 import { MindMapCard } from '@/components/MindMapCard/MindMapCard';
 import { SectionTitle } from '@/components/SectionTitle/SectionTitle';
 import { nanoid } from 'nanoid';
-import { cn } from '@/assets/utils/cn';
 import { Text } from '@/components/Text/Text';
-import { SubTitle } from '@/components/SubTitle/SubTitle';
 import { Link } from 'lucide-react';
 
 export const MindMap = () => {
@@ -22,30 +20,27 @@ export const MindMap = () => {
           <div className="opacity-0 w-1 h-1">1</div>
           <div className="opacity-0 w-1 h-1"></div>
         </div>
-        <ul className="hidden md:grid md:grid-cols-2 gap-6 ">
+        <ul className="hidden md:mx-auto md:grid md:grid-cols-2 md:gap-6 ">
           {mindMap.map(item => {
             return (
               <li
                 key={nanoid()}
                 className="bg-secondaryTextColor flex flex-col items-center px-6 py-3 rounded-xl"
               >
-                <Text className="uppercase text-xs text-left leading-[1.1666] mb-[78px]">
+                <Text className="mb-[78px] md:text-2xl md:pl-[132px] xl:pl-[252px] ">
                   {item.description}
                 </Text>
-                <h3 className="text-[32px] font-black font-RightGrotesk">
+                <h3 className="uppercase text-[32px] font-black font-['Right_Grotesk_Compact_Black'] text-left xl:text-[64px]">
                   {item.title}
                 </h3>
               </li>
             );
           })}
           <li className="bg-secondaryTextColor flex flex-col items-center px-6 py-3 rounded-xl">
-            <Link
-              href="https://www.alamy.com/concept-of-nft-mind-map-in-handwritten-style-image442981541.html"
-              className="leading-none font-black font-['Right_Grotesk_Compact_Black'] md:text-[32px] xl:text-[64px]"
-            ></Link>
-            <h2 className="text-[32px] font-black font-RightGrotesk">
+            <Link href="https://www.alamy.com/concept-of-nft-mind-map-in-handwritten-style-image442981541.html"></Link>
+            <h3 className="uppercase text-[32px] font-black 'Right_Grotesk_Compact_Black'] xl:text-[64px] text-left md:pt-[146px] md:px-6 ">
               Learn more in mind map
-            </h2>
+            </h3>
           </li>
         </ul>
       </div>
